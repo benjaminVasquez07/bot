@@ -1,13 +1,14 @@
-import discord
+import discord  # type: ignore
 import os
 import random
 
 # Cargar variables de entorno
-TOKEN =os.getenv("DISCORD_TOKEN")
+TOKEN = os.getenv("DISCORD_TOKEN")
 
 # Crear cliente
 intents = discord.Intents.default()
 intents.message_content = True
+intents.members = True 
 client = discord.Client(intents=intents)
 
 # Roles del juego
